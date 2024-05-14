@@ -1,0 +1,171 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+img {
+    height: 450px;
+    margin-left: 14rem;
+    max-width: 100%;
+}
+
+.logo-mestra {
+    height: 70px;
+    width: 150px;
+    margin-left: -19rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+#particles-js {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.modal {
+    padding-bottom: 7rem;
+    margin: auto;
+    padding-left: 5rem;
+}
+
+.texto-Principal, .texto-Secundario {
+    font-family: sans-serif;
+    color: #5370f2;
+    margin: 0;
+    transform: translateX(-3rem);
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    position: relative;
+    top: 16rem;
+}
+
+.texto-Secundario {
+    color: #36378a;
+}
+
+.mestra-footer {
+    height: 50px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #74788d;
+    font-size: 14px;
+    padding: 0 2rem;
+    z-index: 101 !important;
+    background-color: var(--branco);
+    bottom: 0;
+    position: fixed;
+}
+
+.mestra-link {
+    text-decoration: none;
+    display: inline-block;
+    color: #74788d;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.mestra-link:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 1rem;
+    left: 0;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.mestra-link:hover {
+    color: #223a95;
+}
+
+.mestra-link:hover:after {
+    width: 100%;
+    border-bottom: 1px solid #223a95;
+    opacity: 0.3;
+}
+
+.mestra-link.menu {
+    padding: 0 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    img {
+        margin-left: 0;
+        height: auto;
+    }
+
+    .modal {
+        padding-left: 2rem;
+        padding-bottom: 5rem;
+    }
+
+    .texto-Principal, .texto-Secundario {
+        transform: translateX(-3rem);
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .texto-Principal, .texto-Secundario {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        transform: translateX(-1.5rem);
+    }
+
+    .mestra-footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .footer-menu {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .footer-menu a {
+        padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-Principal, .texto-Secundario {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        transform: translateX(0);
+    }
+
+    .mestra-footer {
+        font-size: 12px;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .footer-menu a {
+        padding: 0 0.25rem;
+    }
+}
